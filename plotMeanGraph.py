@@ -78,7 +78,7 @@ def main():
     plot_adc_graph(1)
     
     plt.tight_layout(h_pad= 10)
-    plt.savefig("Group B4 - Project 1 graphs")
+    plt.savefig("Group B4 - Project 1 graphs (average)")
     plt.show()
         
 main()
