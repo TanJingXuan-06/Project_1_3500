@@ -20,10 +20,10 @@ def plot_linear_graph():
     initial_range_data = [float(a) for a in initial_range_data]
     
     
+    plt.figure(figsize=(12,3))
     plt.plot([volume[0],volume[-1]],[initial_range_data[0],initial_range_data[-1]])
     plt.scatter(volume,initial_range_data,color = 'red')
     plt.legend(["Linear Line", "Initial Range Data"], loc = 'best')
-    
     plt.title("Initial Range Data Over Volume Graph")
     plt.xlabel("Volume")
     plt.ylabel("Inital Range Data (volts)")
