@@ -4,7 +4,6 @@ import numpy as np
 def average(file) :
     
     raw_data = []
-    average_data = []
     compiled_data = []
     
     with open(file, 'r') as csvfile:
@@ -17,24 +16,28 @@ def average(file) :
     
     volume = [sublist[0] for sublist in raw_data]
     volume = [int(v) for v in volume]
-    moisture = [sublist[-2] for sublist in raw_data]
+    moisture = [sublist[1] for sublist in raw_data]
     moisture = [float(m) for m in moisture]
     
     for counter in range(0,len(moisture),3) : 
         
         sum = 0 
         
+        raw_data = []
+        raw_data.append(volume[counter])
+        
         for i in range(0,3) : 
             
             actual_count = counter + i 
             
             sum += moisture[actual_count]
+            raw_data.append(moisture[actual_count])
         
             
         mean = sum / 3 
         mean = round(mean,4)
-        average_data.append(mean)
-        compiled_data.append([volume[counter],mean])
+        raw_data.append(mean)
+        compiled_data.append(raw_data)
         
         if counter == 78 : 
             break 
@@ -45,8 +48,8 @@ def main() :
     
     moisture = average('moisture_data.csv')  
     
-    with open('moisture_average_data.csv', 'w', newline='') as csv_adc_file:
-        writer = csv.writer(csv_adc_file)
+    with open('moisture_average_data.csv', 'w', newline='') as csv_moisture_file:
+        writer = csv.writer(csv_moisture_file)
         writer.writerows(moisture)
         
       
