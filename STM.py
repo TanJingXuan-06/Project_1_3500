@@ -202,6 +202,7 @@ def main():
         except ValueError: 
             continue 
 
-main()
+if __name__ == '__main__':
+    main()
     
     

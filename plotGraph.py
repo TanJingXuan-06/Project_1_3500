@@ -125,4 +125,5 @@ def main():
     plt.savefig("Group B4 - Project 1 graphs")
     plt.show()
         
-main()
+if __name__ == '__main__':
+    main()

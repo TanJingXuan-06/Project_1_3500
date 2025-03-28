@@ -59,10 +59,8 @@ def main() :
         writer = csv.writer(csv_adc_file)
         writer.writerows(adc)
     
-    
-        
-        
-main()
+if __name__ == '__main__':
+    main()
             
             
     
