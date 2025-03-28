@@ -39,7 +39,7 @@ def plot_moisture_graph(iter):
             plt.scatter(volume, moisture2, color = "black", s = 10)
             plt.scatter(volume, moisture3, color = "purple", s = 10)
             
-            plt.legend(["Linear Line", "+10% Deviation", "-10% Deviation", "+3% Deviation", "-3% Deviation", "+5% Deviation", "-5% Deviation","Actual Data 1", "Actual Data 2", "Actual Data 3"])
+            plt.legend(["Linear Line", "+10% Deviation", "-10% Deviation", "+3% Deviation", "-3% Deviation","Actual Data 1", "Actual Data 2", "Actual Data 3"])
                         
         if iter == 1 : 
             moisture = [sublist[-2] for sublist in moisture_data]
@@ -91,7 +91,7 @@ def plot_adc_graph(iter):
             plt.scatter(volume, adc2, color = "black", s = 10)
             plt.scatter(volume, adc3, color = "purple", s = 10)
             
-            plt.legend(["Linear Line", "+10% Deviation", "-10% Deviation", "Actual Data 1", "Actual Data 2", "Actual Data 3"], loc = 'best')
+            plt.legend(["Linear Line", "+10% Deviation", "-10% Deviation", "+3% Deviation", "-3% Deviation", "Actual Data 1", "Actual Data 2", "Actual Data 3"], loc = 'best')
                         
         if iter == 1 : 
             adc = [sublist[-1] for sublist in adc_data]
